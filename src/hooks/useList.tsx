@@ -3,8 +3,6 @@ import {useState, useEffect} from 'react';
 import {GetLocalStorage, AddToStorage} from '../utilities/localStorage';
 import {SortToPriorityList} from '../utilities/sort';
 
-import { useItem } from '../hooks/useItem'
-
 type toDolist = {
     id: number,
     message: string,
@@ -31,13 +29,6 @@ export const useList = () => {
             }));
         }
     }, []);
-
-    const updateList = (newList:toDolist[]) => {
-        setList(prev => ({
-            ...prev,
-            list: newList
-        }))
-    }
 
     const updateListItem = (id:number, type: string) => {
         const idNum: number = id;
@@ -96,5 +87,5 @@ export const useList = () => {
         }));
     }
 
-    return [list.list, updateList, updateListItem, addToDo, resetList] as const;
+    return [list.list, updateListItem, addToDo, resetList] as const;
 }

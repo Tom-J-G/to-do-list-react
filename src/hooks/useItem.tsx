@@ -32,13 +32,6 @@ export const useItem = () => {
         }
     }, [])
 
-    const updateId = () => {
-        setItem(prev => ({
-            ...prev,
-            id: ++prev.id
-        }))
-    }
-
     const updateMessage = (msg: string) => {
         setItem(prev => ({
             ...prev,
@@ -62,5 +55,5 @@ export const useItem = () => {
         }))
     }
 
-    return [item, updateId, updateMessage, addedToList, resetItem] as const;
+    return [item, updateMessage, addedToList, resetItem] as const;
 }

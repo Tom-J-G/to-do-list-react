@@ -13,8 +13,8 @@ import { useList } from '../hooks/useList';
 
 const Home = () => {
 
-    const [item, updateId, updateMessage, addedToList, clearItem] = useItem();
-    const [list, updateList, updateListItem, addTodo, clearList] = useList();
+    const [item, updateMessage, addedToList, clearItem] = useItem();
+    const [list, updateListItem, addTodo, clearList] = useList();
 
     const addItem = (id: number, message: string) => {
         addTodo(id, message);
