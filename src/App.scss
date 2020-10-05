@@ -1,0 +1,153 @@
+$background-color: #252736;
+$font-fam: Helvetica, sans-serif;
+$title-color: #939AB4;
+$button-color: rgba(57, 63, 84, 0.9);
+
+body {
+    background-color: $background-color !important;
+    font-family: $font-fam;
+    color: $title-color;
+}
+
+
+
+#toDoList {
+    padding: 50px;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 40px;
+        color: $title-color;
+    }
+
+    input {
+        border-style: none;
+        background: transparent;
+        outline: none;
+    }
+
+    svg {
+        font-size: 2rem;
+    }
+
+    p {
+        color: $title-color;
+        text-align: center;
+    }
+
+    .clear {
+        margin-top: 30px;
+        background: $button-color;
+        border-color: rgba(57, 63, 84, 0.8);;
+
+        &:focus {
+            background: #4c5265;
+        }
+        &:hover {
+            background: #4c5265;
+        }
+    }
+}
+
+
+.left {
+        text-align: left;
+}
+
+.right {
+        text-align: right;
+}
+
+#listInput {
+    width: 500px;
+    height: 38px;
+    padding: 4px;
+    color: #7881A1;
+    &::-webkit-input-placeholder {
+        color: #7881A1;
+    }
+}
+
+.input-container {
+    display: flex;
+    justify-content: flex-end;
+
+    .flex-right {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        flex-direction: row;
+        width: 100%;
+        max-width: 500px;
+        border-radius: 2px;
+        padding: 0.6rem 0.6rem 0.6rem;
+        background: rgba(57, 63, 84, 0.8);
+        &:after {
+            content: "";
+            position: absolute;
+            width: 500px;
+            right: 0px;
+            bottom: 0px;
+            z-index: 999;
+            height: 2px;
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+            background-position: 0% 0%;
+            background-color: #3b74c4;
+            background-size: 500% auto;
+
+        }
+    }
+    
+}
+
+button {
+    &.add {
+        height: 56px;
+        font-size: 1.4rem;
+        background: $button-color;
+        border-color: rgba(57, 63, 84, 0.8);;
+
+        &:focus {
+            background: #4c5265;
+        }
+        &:hover {
+            background: #4c5265;
+        }
+    }
+}
+
+#list {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    max-width: 650px;
+
+    .list-group-item {
+        margin-bottom: 12px;
+        border-radius: 3px;
+
+        .col-10, .col-2 {
+            display: flex;
+            align-items: center;
+        }
+
+        .col-2 {
+            justify-content: center;
+        }
+
+        button.btn {
+            background-color: rgba(108, 117, 125, 0.6);
+            border-color: transparent;
+            position: absolute;
+            right: -6px;
+            width: 100%;
+            height: 50px;
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+}
