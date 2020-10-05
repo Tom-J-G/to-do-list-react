@@ -1,4 +1,13 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Simple To Do List created to learn Typescript and React Hooks.
+
+  Input field to add to the list.
+
+  You can tick the button on the item when the it is complete.
+  If its bigger priority you can press the item to change it.
+
+  The list gets saved to local storage and the position is decided on priority
+  
+  <img width="560" alt="Screenshot 2020-08-14 at 13 49 36" src="https://user-images.githubusercontent.com/64728911/90255930-dfa8b100-de3c-11ea-88b0-daaba9763a28.png">
 
 ## Available Scripts
 
