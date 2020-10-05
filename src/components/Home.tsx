@@ -37,29 +37,26 @@ const Home = () => {
     }
 
     return(
-        <div>
-            <Container fluid="md">
-                    <Row>
-                        <Col>
-                            <h1>To Do List</h1>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <p>
-                                Add to your To do List<br />
-                                once Done tick the box, click the item if its a bigger priority<br/>
-                                Top priority at the top of the list
-                            </p>
-                        </Col>
-                    </Row>
-                    <InputForm item={item} addItem={addItem} updateMsg={updateMsg} />
-                    <Row>
-                        <ToDoList list={list} updateListItem={updateItemInList} clearAll={clearAll} />
-                    </Row>
-            </Container>
-
-        </div>
+        <Container fluid="md">
+                <Row>
+                    <Col>
+                        <h1>To Do List</h1>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <p>
+                            Add to your To do List<br />
+                            once Done tick the box, click the item if its a bigger priority<br/>
+                            Top priority at the top of the list
+                        </p>
+                    </Col>
+                </Row>
+                <InputForm item={item} addItem={addItem} updateMsg={updateMsg} />
+                <Row>
+                    <ToDoList list={list} updateListItem={updateItemInList} clearAll={clearAll} />
+                </Row>
+        </Container>
     )
 }
 

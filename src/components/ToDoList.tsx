@@ -27,12 +27,13 @@ const ToDoList = ({list, updateListItem, clearAll}: props) => {
                         </ListGroupItem>
                     )}
                 </ListGroup>
-            </Container>
-            <Row>
-                <Col>
-                {(list.length === 0 ? null : <ClearButton clear={clearAll} />)}
+                <Row>
+                    <Col>
+                    {(list.length === 0 ? null : <ClearButton clear={clearAll} />)}
                 </Col>
-            </Row>    
+            </Row> 
+            </Container>
+               
         </Col>
     )
 }
